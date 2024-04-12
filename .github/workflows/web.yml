@@ -1,4 +1,4 @@
-name: whack a Jack
+name: html forms
 
 on: [push, pull_request]
 
