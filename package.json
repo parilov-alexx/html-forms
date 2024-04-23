@@ -1,7 +1,7 @@
 {
   "name": "html-forms",
   "version": "1.0.0",
-  "description": "[Ссылка на pages](https://parilov-alexx.github.io/whack-a-jack/)",
+  "description": "[Ссылка на pages](https://parilov-alexx.github.io/html-forms/)",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
