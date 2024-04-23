@@ -20,7 +20,7 @@ test_script:
   - yarn lint  # скрипт тестирования
   - yarn e2e
 
-  deploy_script:  # скрипт развёртывания
+deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
