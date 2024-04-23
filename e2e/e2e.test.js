@@ -7,23 +7,28 @@ describe('Форма popover', () => {
   let browser;
   let page;
   let server = null;
-  const baseUrl = 'http://localhost:9000';
+  const baseUrl = 'http://localhost:8087';
 
   beforeAll(async () => {
     server = fork(`${__dirname}/e2e.server.js`);
     await new Promise((resolve, reject) => {
-      server.on('error', reject);
-      server.on('message', (message) => {
-        if (message === 'ok') {
-          resolve();
-        }
-      });
+      if (server.connected) {
+        process.send('ok');
+        resolve();
+      } else {
+        reject();
+      }
     });
 
     browser = await puppeteer.launch({
-      //headless: false, // show gui
-      //slowMo: 150,
-      //devtools: true, // show devTools
+      headless: false, // show gui
+      slowMo: 200,
+      devtools: false, // show devTools
+      args: ['--window-size=1000,1000'],
+      defaultViewport: {
+        width: 1000,
+        height: 1000,
+      },
     });
     page = await browser.newPage();
   });

@@ -1,3 +1,4 @@
 dist
 coverage
 docs
+*/e2e.server.js
