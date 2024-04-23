@@ -7,7 +7,7 @@ describe('Форма popover', () => {
   let browser;
   let page;
   let server = null;
-  const baseUrl = 'http://localhost:8087';
+  const baseUrl = 'http://localhost:9090';
 
   beforeAll(async () => {
     server = fork(`${__dirname}/e2e.server.js`);
