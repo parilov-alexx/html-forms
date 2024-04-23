@@ -6,7 +6,7 @@ branches:
   only:
     - master  # ветка git
 
-cache: node_modules  # кеширование
+cache: off  # кеширование
 
 install:
   - yarn  # команда установки зависимостей
